@@ -76,11 +76,11 @@
                                 <td> <?= $barang['nama_barang'] ?> </td>
                                 <td> <?= $barang['stock'] ?> </td>
                                 <td>
-                                    <button class="button is-danger">
+                                    <a href="http://localhost:8888/Percetakan/barang/deleteonebarang/<?= $barang['kode_barang']?>" onClick="return confirm('Anda ingin menghapus data ini ?')" title="Hapus" class="button is-danger">
                                         <span class="icon">
                                             <i class="fa fa-trash"></i>
                                         </span>
-                                    </button>
+                                    </a>
                                     <button class="button is-warning">
                                         <span class="icon">
                                             <i class="fa fa-edit"></i>
@@ -93,7 +93,7 @@
                     </table>
 
                     <div class="is-pulled-right">
-                        <button class="button is-primary is-rounded">
+                        <button class="modal-button button is-primary is-rounded" data-target="#modalTambahBarang">
                             <span class="icon icon-small">
                                 <i class="fa fa-plus"></i>
                             </span>
@@ -104,4 +104,56 @@
         </div>
 
     </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modalTambahBarang">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title"> Tambah Data Barang </p>
+                <button class="delete modal-close" aria-label="close"></button>
+            </header>
+            <form action="http://localhost:8888/Percetakan/barang/addonebarang" method="POST">
+                <section class="modal-card-body">
+                    <div class="field">
+                        <label for="kode_barang" class="label">Kode Barang</label>
+                        <div class="control has-icons-left">
+                            <input type="text" class="input is-primary" name="kode_barang" placeholder="Kode Barang" required="true">
+                            <span class="icon">
+                                <i class="fa fa-code"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="kode_barang" class="label">Nama Barang</label>
+                        <div class="control has-icons-left">
+                            <input type="text" class="input is-primary" name="nama_barang" placeholder="Nama Barang" required="true">
+                            <span class="icon">
+                                <i class="fa fa-book"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="kode_barang" class="label">Stock Barang</label>
+                        <div class="control has-icons-left">
+                            <input type="number" class="input is-primary" name="stock" placeholder="Stock Barang" required="true">
+                            <span class="icon">
+                                <i class="fa fa-book"></i>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button type="submit" class="button is-success">Save changes</button>
+                    <button class="button button-cancel">Cancel</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+    <!-- End Modal -->
 </div>
+
+
+<script src="http://localhost:8888/Percetakan/public/js/app.js"></script>
