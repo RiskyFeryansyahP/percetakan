@@ -14,6 +14,6 @@
         <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/vendor/line-awesome/css/line-awesome-font-awesome.min.css">
         <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/style.css">
         <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/css/bulma_override.css">
-        <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/app.css">
+        <!-- <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/app.css"> -->
     </head>
     <body>
