@@ -1,6 +1,6 @@
 <nav class="navbar columns is-fixed-top" role="navigation" aria-label="main navigation" id="app-header">
     <div class="navbar-brand is-primary column is-2 is-paddingless">
-        <a class="navbar-item" href="/">
+        <a class="navbar-item" href="http://localhost:8888/Percetakan/dashboard">
             PERCETAKAN
         </a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="touchMenu">
