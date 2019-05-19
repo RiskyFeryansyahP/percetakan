@@ -54,7 +54,7 @@ class Database
 
     public function execute()
     {
-        $this->stmt->execute();
+        return $this->stmt->execute();
     }
 
     // jika data yang ditampilkan banyak
