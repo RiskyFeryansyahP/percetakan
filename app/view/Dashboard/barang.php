@@ -81,7 +81,10 @@
                                             <i class="fa fa-trash"></i>
                                         </span>
                                     </a>
-                                    <button class="button is-warning">
+                                    <button 
+                                    class="modal-button button is-warning" 
+                                    data-modal="<?= $barang['kode_barang'] . '-' . $barang['nama_barang'] . '-' . $barang['stock'] ?>" 
+                                    data-target="#modalEditBarang">
                                         <span class="icon">
                                             <i class="fa fa-edit"></i>
                                         </span>
@@ -105,7 +108,7 @@
 
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Tambah Barang -->
     <div class="modal" id="modalTambahBarang">
         <div class="modal-background"></div>
         <div class="modal-card">
@@ -139,6 +142,55 @@
                         <label for="kode_barang" class="label">Stock Barang</label>
                         <div class="control has-icons-left">
                             <input type="number" class="input is-primary" name="stock" placeholder="Stock Barang" required="true">
+                            <span class="icon">
+                                <i class="fa fa-book"></i>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button type="submit" class="button is-success">Save changes</button>
+                    <button class="button button-cancel">Cancel</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Modal Edit Barang -->
+    <div class="modal" id="modalEditBarang">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title"> Tambah Data Barang </p>
+                <button class="delete modal-close" aria-label="close"></button>
+            </header>
+            <form action="http://localhost:8888/Percetakan/barang/editonebarang" method="POST">
+                <section class="modal-card-body">
+                    <div class="field">
+                        <label for="kode_barang" class="label">Kode Barang</label>
+                        <div class="control has-icons-left">
+                            <input type="text" class="input is-primary is-disabled" id="kode_barang" name="kode_barang" placeholder="Kode Barang" required="true">
+                            <span class="icon">
+                                <i class="fa fa-code"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="kode_barang" class="label">Nama Barang</label>
+                        <div class="control has-icons-left">
+                            <input type="text" class="input is-primary" id="nama_barang" name="nama_barang" placeholder="Nama Barang" required="true">
+                            <span class="icon">
+                                <i class="fa fa-book"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="kode_barang" class="label">Stock Barang</label>
+                        <div class="control has-icons-left">
+                            <input type="number" class="input is-primary" id="stock" name="stock" placeholder="Stock Barang" required="true">
                             <span class="icon">
                                 <i class="fa fa-book"></i>
                             </span>
