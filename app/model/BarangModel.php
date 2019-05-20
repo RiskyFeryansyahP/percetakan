@@ -50,4 +50,23 @@ class BarangModel
             return false;
         }
     }
+
+    public function updateBarang($kode_barang, $nama_barang, $stock)
+    {
+        $this->db->query("UPDATE barang set nama_barang = :nama_barang, stock = :stock WHERE kode_barang = :kode_barang");
+        
+        $this->db->bind('kode_barang', $kode_barang);
+        $this->db->bind('nama_barang', $nama_barang);
+        $this->db->bind('stock', $stock);
+
+        $result = $this->db->execute();
+        if($result)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
