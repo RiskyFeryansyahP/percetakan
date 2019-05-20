@@ -30,4 +30,20 @@ class Barang extends Controller
             echo "Gagal!";
         }
     }
+
+    public function EditOneBarang()
+    {
+        $kode_barang = $_POST['kode_barang'];
+        $nama_barang = $_POST['nama_barang'];
+        $stock = $_POST['stock'];
+        $result = $this->model('BarangModel')->updateBarang($kode_barang, $nama_barang, $stock);
+        if($result)
+        {
+            header("Location: http://localhost:8888/Percetakan/dashboard/barang");
+        }
+        else
+        {
+            echo "Gagal!";
+        }
+    }
 }
