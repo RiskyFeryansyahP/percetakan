@@ -8,9 +8,14 @@ document.querySelectorAll('.modal-button').forEach((element) => {
             console.log(data)
             console.log(id)
 
-            document.getElementById("kode_barang").value = data[0]
-            document.getElementById("nama_barang").value = data[1]
-            document.getElementById("stock").value = data[2]
+            // document.getElementById("kode_barang").value = data[0]
+            // document.getElementById("nama_barang").value = data[1]
+            // document.getElementById("stock").value = data[2]
+
+            input = document.querySelectorAll("#input")
+            for (let i = 0; i < input.length; i++) {
+                input[i].value = data[i]
+            }
         }
 
         target.classList.add('is-active')
