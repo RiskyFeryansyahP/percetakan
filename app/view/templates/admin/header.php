@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
         <!-- <link rel="stylesheet" href="/bulma-admin/bower_components/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"> -->
         <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/vendor/line-awesome/css/line-awesome-font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/style.css">
         <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/css/bulma_override.css">
         <!-- <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/app.css"> -->
