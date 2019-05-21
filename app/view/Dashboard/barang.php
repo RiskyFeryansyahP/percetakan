@@ -7,14 +7,14 @@
             </p>
             <ul class="menu-list">
                 <li>
-                    <a class="is-active" href="http://localhost:8888/Percetakan/dashboard">
+                    <a class="" href="http://localhost:8888/Percetakan/dashboard">
                         <span class="icon">
                             <i class="fa fa-home"></i>
                         </span> Dashboard
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/">
+                    <a class="is-active" href="http://localhost:8888/Percetakan/dashboard/barang">
                         <span class="icon">
                             <i class="fa fa-edit"></i>
                         </span> Data Barang
@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/">
+                    <a class="" href="http://localhost:8888/Percetakan/dashboard/supplier">
                         <span class="icon">
                             <i class="fa fa-table"></i>
                         </span> Data Supplier
@@ -170,7 +170,7 @@
                     <div class="field">
                         <label for="kode_barang" class="label">Kode Barang</label>
                         <div class="control has-icons-left">
-                            <input type="text" class="input is-primary is-disabled" id="kode_barang" name="kode_barang" placeholder="Kode Barang" required="true">
+                            <input type="text" class="input is-primary is-disabled" id="input" name="kode_barang" placeholder="Kode Barang" required="true" readonly>
                             <span class="icon">
                                 <i class="fa fa-code"></i>
                             </span>
@@ -180,7 +180,7 @@
                     <div class="field">
                         <label for="kode_barang" class="label">Nama Barang</label>
                         <div class="control has-icons-left">
-                            <input type="text" class="input is-primary" id="nama_barang" name="nama_barang" placeholder="Nama Barang" required="true">
+                            <input type="text" class="input is-primary" id="input" name="nama_barang" placeholder="Nama Barang" required="true">
                             <span class="icon">
                                 <i class="fa fa-book"></i>
                             </span>
@@ -190,7 +190,7 @@
                     <div class="field">
                         <label for="kode_barang" class="label">Stock Barang</label>
                         <div class="control has-icons-left">
-                            <input type="number" class="input is-primary" id="stock" name="stock" placeholder="Stock Barang" required="true">
+                            <input type="number" class="input is-primary" id="input" name="stock" placeholder="Stock Barang" required="true">
                             <span class="icon">
                                 <i class="fa fa-book"></i>
                             </span>
