@@ -14,7 +14,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/">
+                    <a class="" href="http://localhost:8888/Percetakan/dashboard/barang">
                         <span class="icon">
                             <i class="fa fa-edit"></i>
                         </span> Data Barang
@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/">
+                    <a class="" href="http://localhost:8888/Percetakan/dashboard/supplier">
                         <span class="icon">
                             <i class="fa fa-table"></i>
                         </span> Data Supplier
@@ -99,7 +99,7 @@
                     </a>
                 </div>
                 <div class="column">
-                    <a class="box quick-stats has-background-warning has-text-white">
+                    <a class="box quick-stats has-background-warning has-text-white" href="http://localhost:8888/Percetakan/dashboard/supplier">
                         <div class="quick-stats-icon">
                             <span class="icon is-large">
                                 <i class="fa fa-3x fa-bell"></i>
