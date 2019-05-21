@@ -22,11 +22,24 @@ class Dashboard extends Controller
     public function barang()
     {
         $data['barang'] = $this->model('BarangModel')->getBarang();
-        $data['judul'] = 'Dashboard';
+        $data['judul'] = 'Data Barang';
         $data['username'] = $_SESSION['user']['username'];
+        
         $this->view('templates/admin/header', $data);
         $this->view('templates/admin/navbar', $data);
         $this->view('dashboard/barang', $data);
         $this->vire('templates/admin/footer');
+    }
+
+    public function supplier()
+    {
+        $data['supplier'] = $this->model('SupplierModel')->getAllDataSupplier();
+        $data['judul'] = 'Data Supplier';
+        $data['username'] = $_SESSION['user']['username'];
+
+        $this->view('templates/admin/header', $data);
+        $this->view('templates/admin/navbar', $data);
+        $this->view('dashboard/supplier', $data);
+        $this->view('templates/admin/footer');
     }
 }
