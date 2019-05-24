@@ -2,6 +2,13 @@
 
 class Barang extends Controller
 {
+
+    public function selectBarang()
+    {
+        $data['barang'] = $this->model('BarangModel')->getBarang();
+        return $data['barang'];
+    }
+
     public function AddOneBarang()
     {
         $kode_barang    = $_POST['kode_barang'];
