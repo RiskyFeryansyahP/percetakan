@@ -42,4 +42,15 @@ class Dashboard extends Controller
         $this->view('dashboard/supplier', $data);
         $this->view('templates/admin/footer');
     }
+
+    public function barangmasuk()
+    {
+        $data['judul'] = 'Barang Masuk';
+        $data['username'] = $_SESSION['user']['username'];
+
+        $this->view('templates/admin/header', $data);
+        $this->view('templates/admin/navbar', $data);
+        $this->view('dashboard/barangmasuk');
+        $this->view('templates/admin/footer');
+    }
 }
