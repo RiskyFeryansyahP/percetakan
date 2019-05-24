@@ -21,14 +21,14 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/">
+                    <a class="" href="http://localhost:8888/Percetakan/dashboard/barangmasuk">
                         <span class="icon">
                             <i class="fa fa-desktop"></i>
                         </span> Barang Masuk
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/">
+                    <a class="" href="http://localhost:8888/Percetakan/dashboard/barangkeluar">
                         <span class="icon">
                             <i class="fa fa-desktop"></i>
                         </span> Barang Keluar
