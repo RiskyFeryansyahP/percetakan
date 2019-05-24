@@ -21,14 +21,14 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/">
+                    <a class="" href="http://localhost:8888/Percetakan/dashboard/barangmasuk">
                         <span class="icon">
                             <i class="fa fa-desktop"></i>
                         </span> Barang Masuk
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/">
+                    <a class="" href="http://localhost:8888/Percetakan/dashboard/barangkeluar">
                         <span class="icon">
                             <i class="fa fa-desktop"></i>
                         </span> Barang Keluar
@@ -73,7 +73,7 @@
                     </a>
                 </div>
                 <div class="column">
-                    <a class="box quick-stats has-background-info has-text-white">
+                    <a class="box quick-stats has-background-info has-text-white" href="http://localhost:8888/Percetakan/dashboard/barangmasuk">
                         <div class="quick-stats-icon">
                             <span class="icon is-large">
                                 <i class="fa fa-3x fa-server"></i>
@@ -86,7 +86,7 @@
                     </a>
                 </div>
                 <div class="column">
-                    <a class="box quick-stats has-background-danger has-text-white">
+                    <a class="box quick-stats has-background-danger has-text-white" href="http://localhost:8888/Percetakan/dashboard/barangkeluar">
                         <div class="quick-stats-icon">
                             <span class="icon is-large">
                                 <i class="fa fa-3x fa-bar-chart"></i>
