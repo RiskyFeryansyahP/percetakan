@@ -22,6 +22,7 @@ class Dashboard extends Controller
     public function barang()
     {
         $data['barang'] = $this->model('BarangModel')->getBarang();
+        $data['supplier'] = $this->model('SupplierModel')->getAllDataSupplier();
         $data['judul'] = 'Data Barang';
         $data['username'] = $_SESSION['user']['username'];
         
@@ -45,12 +46,15 @@ class Dashboard extends Controller
 
     public function barangmasuk()
     {
+        $data['barangmasuk'] = $this->model('BarangMasukModel')->getAllBarangMasuk();
+        $data['supplier'] = $this->model('SupplierModel')->getAllDataSupplier();
+        $data['barang'] = $this->model('BarangModel')->getBarang();
         $data['judul'] = 'Barang Masuk';
         $data['username'] = $_SESSION['user']['username'];
 
         $this->view('templates/admin/header', $data);
         $this->view('templates/admin/navbar', $data);
-        $this->view('dashboard/barangmasuk');
+        $this->view('dashboard/barangmasuk', $data);
         $this->view('templates/admin/footer');
     }
 }
