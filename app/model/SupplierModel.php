@@ -15,6 +15,13 @@ class SupplierModel
         return $this->db->resultSet();
     }
 
+    public function findDataSupplier($nama_barang)
+    {
+        $barang = explode(" ", $nama_barang);
+        $this->db->query("SELECT supplier.kode_supplier, supplier.nama_supplier FROM supplier, barang WHERE supplier.kode_supplier = barang.kode_supplier AND barang.nama_barang LIKE '%$barang[0]%' ");
+        return $this->db->resultSet();
+    }
+
     public function addDataSupplier($kode_supplier, $nama_supplier, $no_telp, $alamat)
     {
         $this->db->query("INSERT INTO supplier VALUES(:kode_supplier, :nama_supplier, :no_telp, :alamat)");
