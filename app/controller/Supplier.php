@@ -2,6 +2,24 @@
 
 class Supplier extends Controller
 {
+    public function getDataSupplier()
+    {
+        $nama_barang = $_POST['nama_barang'];
+
+        $result = $this->model('SupplierModel')->findDataSupplier($nama_barang);
+
+        $dataArr = array();
+
+        foreach ($result as $data ) {
+            $dataArr[] = array(
+                "kode_supplier" => $data['kode_supplier'],
+                "nama_supplier" => $data['nama_supplier']
+            );
+        };
+
+        echo json_encode($dataArr);
+    }
+
     public function addOneDataSupplier()
     {
         $kode_supplier = $_POST['kode_supplier'];
