@@ -28,13 +28,6 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="http://localhost:8888/Percetakan/dashboard/barangkeluar">
-                        <span class="icon">
-                            <i class="fa fa-desktop"></i>
-                        </span> Barang Keluar
-                    </a>
-                </li>
-                <li>
                     <a class="" href="http://localhost:8888/Percetakan/dashboard/supplier">
                         <span class="icon">
                             <i class="fa fa-table"></i>
@@ -66,6 +59,7 @@
                                 <th>Kode Barang</th>
                                 <th>Nama Barang</th>
                                 <th>Stock</th>
+                                <th> Nama Supplier </th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -75,6 +69,7 @@
                                 <td> <?= $barang['kode_barang'] ?> </td>
                                 <td> <?= $barang['nama_barang'] ?> </td>
                                 <td> <?= $barang['stock'] ?> </td>
+                                <td> <?= $barang['nama_supplier'] ?> </td>
                                 <td>
                                     <a href="http://localhost:8888/Percetakan/barang/deleteonebarang/<?= $barang['kode_barang']?>" onClick="return confirm('Anda ingin menghapus data ini ?')" title="Hapus" class="button is-danger">
                                         <span class="icon">
@@ -83,7 +78,7 @@
                                     </a>
                                     <button 
                                     class="modal-button button is-warning" 
-                                    data-modal="<?= $barang['kode_barang'] . '-' . $barang['nama_barang'] . '-' . $barang['stock'] ?>" 
+                                    data-modal="<?= $barang['kode_barang'] . '-' . $barang['nama_barang'] . '-' . $barang['stock'] . '-' . $barang['nama_supplier'] ?>" 
                                     data-target="#modalEditBarang">
                                         <span class="icon">
                                             <i class="fa fa-edit"></i>
@@ -147,6 +142,23 @@
                             </span>
                         </div>
                     </div>
+                    
+                    <div class="field">
+                        <label for="kode_suppluer" class="label"> Nama Supplier </label>
+                        <div class="control has-icons-left">
+                            <div class="select is-primary is-fullwidth">
+                                <select name="kode_supplier" id="">
+                                    <option value="" selected disabled hidden>Pilih supplier</option>
+                                    <?php foreach($data['supplier'] as $supplier) : ?>
+                                    <option value="<?= $supplier['kode_supplier'] ?>"> <?= $supplier['nama_supplier'] ?> </option>
+                                    <?php endforeach ?>
+                                </select>
+                                <span class="icon">
+                                    <i class="fas fa-code"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <footer class="modal-card-foot">
                     <button type="submit" class="button is-success">Save changes</button>
@@ -194,6 +206,23 @@
                             <span class="icon">
                                 <i class="fa fa-book"></i>
                             </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="kode_supplier" class="label"> Nama Supplier </label>
+                        <div class="control has-icons-left">
+                            <div class="select is-primary is-fullwidth">
+                                <select name="kode_supplier" id="kode_supplier">
+                                    <option id="option" value="" selected disabled> Pilih Supplier  </option>
+                                    <?php foreach($data['supplier'] as $supplier) : ?>
+                                    <option value="<?= $supplier['kode_supplier'] ?>"> <?= $supplier['nama_supplier'] ?> </option>
+                                    <?php endforeach ?>
+                                </select>
+                                <span class="icon">
+                                    <i class="fas fa-code"></i>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </section>
