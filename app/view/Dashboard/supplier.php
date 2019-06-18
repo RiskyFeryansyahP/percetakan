@@ -28,13 +28,6 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="http://localhost:8888/Percetakan/dashboard/barangkeluar">
-                        <span class="icon">
-                            <i class="fa fa-desktop"></i>
-                        </span> Barang Keluar
-                    </a>
-                </li>
-                <li>
                     <a class="is-active" href="http://localhost:8888/Percetakan/dashboard/supplier">
                         <span class="icon">
                             <i class="fa fa-table"></i>
