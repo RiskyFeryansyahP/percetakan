@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="EFtS0B47HxN7Z3Flkh5fbWHYsw5PR8HYSOL9f6ig">
-        <title>Bulma Admin | KCDEV </title>
+        <title> <?= $data['judul'] ?> | PERCETAKAN </title>
 
         <link rel="shortcut icon" href="public/images/icon.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/icon?family=Poppins" rel="stylesheet">
@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/style.css">
         <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/css/bulma_override.css">
+        <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/css/dataTables.bulma.css">
         <!-- <link rel="stylesheet" href="http://localhost:8888/Percetakan/public/app.css"> -->
     </head>
     <body>
