@@ -14,7 +14,8 @@ class Barang extends Controller
         $kode_barang    = $_POST['kode_barang'];
         $nama_barang    = $_POST['nama_barang'];
         $stock          = $_POST['stock'];
-        $result = $this->model('BarangModel')->addBarang($kode_barang, $nama_barang, $stock);
+        $kode_supplier  = $_POST['kode_supplier'];
+        $result = $this->model('BarangModel')->addBarang($kode_barang, $nama_barang, $stock, $kode_supplier);
         if($result)
         {
             header("Location: http://localhost:8888/Percetakan/dashboard/barang");
@@ -40,10 +41,11 @@ class Barang extends Controller
 
     public function EditOneBarang()
     {
-        $kode_barang = $_POST['kode_barang'];
-        $nama_barang = $_POST['nama_barang'];
-        $stock = $_POST['stock'];
-        $result = $this->model('BarangModel')->updateBarang($kode_barang, $nama_barang, $stock);
+        $kode_barang    = $_POST['kode_barang'];
+        $nama_barang    = $_POST['nama_barang'];
+        $stock          = $_POST['stock'];
+        $kode_supplier  = $_POST['kode_supplier'];
+        $result = $this->model('BarangModel')->updateBarang($kode_barang, $nama_barang, $stock, $kode_supplier);
         if($result)
         {
             header("Location: http://localhost:8888/Percetakan/dashboard/barang");
