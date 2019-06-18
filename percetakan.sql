@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Waktu pembuatan: 19 Bulan Mei 2019 pada 17.36
+-- Waktu pembuatan: 18 Jun 2019 pada 12.14
 -- Versi server: 5.6.38
 -- Versi PHP: 7.1.12
 
@@ -23,20 +23,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `barang` (
   `kode_barang` varchar(15) NOT NULL,
   `nama_barang` varchar(30) NOT NULL,
-  `stock` int(11) NOT NULL
+  `stock` int(11) NOT NULL,
+  `kode_supplier` varchar(15) NOT NULL COMMENT 'Foreign Key dari table Supplier'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data untuk tabel `barang`
 --
 
-INSERT INTO `barang` (`kode_barang`, `nama_barang`, `stock`) VALUES
-('B001', 'HVS', 20),
-('B002', 'Karton', 40),
-('B003', 'Tinta', 5),
-('B004', 'HVS F4', 100),
-('B005', 'HVS A3', 50),
-('B006', 'HVS A5', 25);
+INSERT INTO `barang` (`kode_barang`, `nama_barang`, `stock`, `kode_supplier`) VALUES
+('B001', 'HVS', 20, 'S001'),
+('B002', 'Karton', 50, 'S002'),
+('B003', 'Tinta', 20, 'S001'),
+('B004', 'HVS F4', 100, 'S002'),
+('B005', 'HVS F5', 50, 'S001');
 
 -- --------------------------------------------------------
 
@@ -60,8 +60,28 @@ CREATE TABLE `barang_masuk` (
   `id_barangmasuk` int(11) NOT NULL,
   `kode_barang` varchar(15) NOT NULL,
   `kode_supplier` varchar(15) NOT NULL,
-  `stock` int(11) NOT NULL
+  `stock` int(11) NOT NULL,
+  `tgl_masuk` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `barang_masuk`
+--
+
+INSERT INTO `barang_masuk` (`id_barangmasuk`, `kode_barang`, `kode_supplier`, `stock`, `tgl_masuk`) VALUES
+(1, 'B003', 'S001', 5, '03/06/2019'),
+(2, 'B002', 'S001', 10, '2019-06-03'),
+(3, 'B003', 'S002', 10, '2019-06-17');
+
+--
+-- Trigger `barang_masuk`
+--
+DELIMITER $$
+CREATE TRIGGER `after_insert_barangmasuk` AFTER INSERT ON `barang_masuk` FOR EACH ROW BEGIN
+UPDATE barang SET stock = stock + new.stock WHERE kode_barang = new.kode_barang;
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -75,6 +95,14 @@ CREATE TABLE `supplier` (
   `no_telp` varchar(15) NOT NULL,
   `alamat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `supplier`
+--
+
+INSERT INTO `supplier` (`kode_supplier`, `nama_supplier`, `no_telp`, `alamat`) VALUES
+('S001', 'PT. Prima Indo Rasa', '08129010602', 'Jl. Asem Baris Raya No. 155, Kebon Baru Tebet, Jakarta Selatan, Indonesia'),
+('S002', 'PT. Sarana Sistem Mikro 1', '02186606841', 'Jl. Kejaksaan No. 18 Pondok Bambu, Jakarta Timur, DKI Jakarta, Indonesia');
 
 -- --------------------------------------------------------
 
@@ -135,6 +163,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `barang_masuk`
+--
+ALTER TABLE `barang_masuk`
+  MODIFY `id_barangmasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
