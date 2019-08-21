@@ -11,7 +11,7 @@ class Dashboard extends Controller
             $this->view('templates/admin/header', $data);
             $this->view('templates/admin/navbar', $data);
             $this->view('dashboard/index');
-            $this->vire('templates/admin/footer');
+            $this->view('templates/admin/footer');
         }
         else
         {
