@@ -17,8 +17,7 @@ class SupplierModel
 
     public function findDataSupplier($nama_barang)
     {
-        $barang = explode(" ", $nama_barang);
-        $this->db->query("SELECT supplier.kode_supplier, supplier.nama_supplier FROM supplier, barang WHERE supplier.kode_supplier = barang.kode_supplier AND barang.nama_barang LIKE '%$barang[0]%' ");
+        $this->db->query("SELECT supplier.kode_supplier, supplier.nama_supplier FROM supplier, barang WHERE supplier.kode_supplier = barang.kode_supplier AND barang.nama_barang LIKE '%$nama_barang%' ");
         return $this->db->resultSet();
     }
 
