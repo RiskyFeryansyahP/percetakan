@@ -29,7 +29,7 @@ class Dashboard extends Controller
         $this->view('templates/admin/header', $data);
         $this->view('templates/admin/navbar', $data);
         $this->view('dashboard/barang', $data);
-        $this->vire('templates/admin/footer');
+        $this->view('templates/admin/footer');
     }
 
     public function supplier()
